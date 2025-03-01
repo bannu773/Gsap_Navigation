@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Menu from "@/components/menu/Menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} page-content hero`}>
+        <Menu />
         {children}
       </body>
     </html>
